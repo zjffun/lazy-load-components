@@ -1,5 +1,8 @@
 {
+
   "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
     "skipLibCheck": true,
     "target": "esnext",
     "useDefineForClassFields": true,
@@ -10,8 +13,8 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts"],
   "exclude": ["dist/**/*.js"]
 }

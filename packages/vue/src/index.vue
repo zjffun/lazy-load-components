@@ -13,8 +13,8 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { type StyleValue, watch } from "vue";
-import type { IObserver } from "./observer";
-import { defaultObserver } from "./observer";
+import type { IObserver } from "@lazy-load-components/core";
+import { defaultObserver } from "@lazy-load-components/core";
 
 const props = withDefaults(
   defineProps<{
@@ -40,7 +40,10 @@ const placeholderRef = ref<HTMLDivElement>();
 
 const _observer = props.observer || defaultObserver;
 
-function setShowing(value: boolean, info?: { entry: IntersectionObserverEntry }) {
+function setShowing(
+  value: boolean,
+  info?: { entry: IntersectionObserverEntry }
+) {
   let _value = value;
 
   const beforeSetShowingResult = props.beforeSetShowing?.(value, info);
@@ -54,7 +57,9 @@ function setShowing(value: boolean, info?: { entry: IntersectionObserverEntry })
 
 function observe() {
   if (!placeholderRef.value) {
-    console.warn("[vue-lazy-loading] observe failed, placeholderRef is null");
+    console.warn(
+      "[vue-lazy-load-components] observe failed, placeholderRef is null"
+    );
     return;
   }
 
@@ -67,7 +72,9 @@ function observe() {
 
 function unobserve() {
   if (!placeholderRef.value) {
-    console.warn("[vue-lazy-loading] unobserve failed, placeholderRef is null");
+    console.warn(
+      "[vue-lazy-load-components] unobserve failed, placeholderRef is null"
+    );
     return;
   }
 
@@ -100,3 +107,4 @@ onBeforeUnmount(() => {
   unobserve();
 });
 </script>
+../packages/core/src/observer../packages/core/src/observer

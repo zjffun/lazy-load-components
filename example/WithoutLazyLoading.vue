@@ -17,7 +17,7 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import VLazyLoading from "../src/index.vue";
+import VLazyLoadComponents from "../src/index.vue";
 import {
   ElTable,
   ElTableColumn,

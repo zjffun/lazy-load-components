@@ -1,45 +1,18 @@
 {
-  "name": "vue-lazy-loading",
+  "name": "lazy-load-components-project",
   "version": "0.0.0",
-  "description": "Lazy load any components.",
-  "keywords": [
-    "vue",
-    "lazy load",
-    "lazy loading",
-    "lazy loading components",
-    "performance optimization"
-  ],
-  "license": "MIT",
-  "author": "Jufeng Zhang",
-  "exports": {
-    ".": {
-      "types": "./dist/src/VLazyLoading.d.ts",
-      "import": "./dist/vue-lazy-loading.es.js",
-      "require": "./dist/vue-lazy-loading.umd.js"
-    }
-  },
-  "main": "./dist/vue-lazy-loading.umd.js",
-  "module": "./dist/vue-lazy-loading.es.js",
-  "types": "./dist/src/VLazyLoading.d.ts",
-  "files": [
-    "dist"
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
   "scripts": {
-    "build": "vue-tsc --noEmit && vite build",
-    "dev": "vite",
-    "serve": "vite preview"
+    "release:build": "lerna run --concurrency 8 --no-private build --skip-nx-cache",
+    "release:publish": "pnpm publish --recursive --tag next",
+    "release:publish:dry-run": "pnpm publish --recursive --tag next --registry=\"http://localhost:4873/\"",
+    "release:version": "lerna version --no-changelog --no-push --no-git-tag-version --no-private --force-publish=@mui/core-downloads-tracker"
   },
-  "devDependencies": {
-    "@types/node": "^20.14.11",
-    "@vitejs/plugin-vue": "^5.0.5",
-    "element-plus": "^2.7.7",
-    "typescript": "^5.5.3",
-    "vite": "^5.3.4",
-    "vite-plugin-dts": "^4.0.0-beta.1",
-    "vue": "^3.4.33",
-    "vue-tsc": "^2.0.26"
+  "dependencies": {
+    "lerna": "^8.1.7"
   },
-  "peerDependencies": {
-    "vue": "3.*"
-  }
+  "packageManager": "pnpm@9.6.0"
 }

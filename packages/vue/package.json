@@ -1,0 +1,49 @@
+{
+  "name": "@lazy-load-components/vue",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Vue lazy load any components.",
+  "keywords": [
+    "vue",
+    "lazy load",
+    "lazy loading",
+    "lazy loading components",
+    "performance optimization"
+  ],
+  "license": "MIT",
+  "author": "Jufeng Zhang",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@lazy-load-components/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "element-plus": "^2.7.7",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4",
+    "vite-plugin-dts": "^4.0.0-beta.1",
+    "vue": "^3.4.33",
+    "vue-tsc": "^2.0.26"
+  },
+  "peerDependencies": {
+    "vue": "3.*"
+  }
+}

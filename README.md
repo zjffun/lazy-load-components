@@ -1,3 +1,3 @@
-# vue-lazy-loading
+# lazy-load-components
 
 Lazy load any components.
