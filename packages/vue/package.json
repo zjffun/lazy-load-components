@@ -1,7 +1,7 @@
 {
   "name": "@lazy-load-components/vue",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Vue lazy load any components.",
   "keywords": [
     "vue",
