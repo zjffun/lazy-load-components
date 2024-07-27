@@ -12,7 +12,8 @@ jobs:
         with:
           node-version: "18"
           registry-url: "https://registry.npmjs.org"
-      - run: yarn install
-      - run: yarn publish
+      - run: pnpm install
+      - run: pnpm run release:build
+      - run: pnpm run release:publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
