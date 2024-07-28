@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "release:build": "lerna run --concurrency 8 --no-private build --skip-nx-cache",
-    "release:publish": "pnpm publish --recursive --tag next --access public",
+    "release:publish": "pnpm publish --recursive --tag next --access public --no-git-checks",
     "release:publish:dry-run": "pnpm publish --recursive --tag next --no-git-checks --registry=\"http://localhost:4873/\"",
     "release:version": "lerna version --no-changelog --no-push --no-git-tag-version --no-private"
   },
