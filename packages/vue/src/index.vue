@@ -107,4 +107,3 @@ onBeforeUnmount(() => {
   unobserve();
 });
 </script>
-../packages/core/src/observer../packages/core/src/observer

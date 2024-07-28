@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "@lazy-load-components/vue-example",
+  "version": "0.0.0",
+  "description": "Vue lazy load any components example.",
+  "license": "MIT",
+  "author": "Jufeng Zhang",
+  "scripts": {
+    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@lazy-load-components/vue": "workspace:*",
+    "element-plus": "^2.7.7",
+    "vue": "^3.4.33"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4",
+    "vue-tsc": "^2.0.26"
+  }
+}

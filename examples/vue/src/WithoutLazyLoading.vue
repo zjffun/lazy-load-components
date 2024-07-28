@@ -17,7 +17,7 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import VLazyLoadComponents from "../src/index.vue";
+import VLazyLoadComponents from "@lazy-load-components/vue";
 import {
   ElTable,
   ElTableColumn,
@@ -27,7 +27,6 @@ import {
   ElRadioButton,
 } from "element-plus";
 
-import "element-plus/dist/index.css";
 
 const type = ref("lazyLoading");
 

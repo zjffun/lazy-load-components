@@ -22,7 +22,7 @@ function createObserver(): IObserver {
   const infoMap = new Map<HTMLDivElement, IObserveInfo>();
   const entryDelayCallMap = new Map<HTMLDivElement, any>();
 
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new window.IntersectionObserver((entries) => {
     for (const entry of entries) {
       const _entry = entry.target as HTMLDivElement;
       if (entry.intersectionRatio > 0.4) {
@@ -44,7 +44,7 @@ function createObserver(): IObserver {
             _entry,
             setTimeout(() => {
               setShowing(true);
-            }, delay)
+            }, delay || 0)
           );
         }
         continue;

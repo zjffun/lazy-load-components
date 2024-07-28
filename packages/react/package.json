@@ -1,10 +1,10 @@
 {
-  "name": "@lazy-load-components/vue",
+  "name": "@lazy-load-components/react",
   "type": "module",
   "version": "0.0.1",
-  "description": "Vue lazy load any components.",
+  "description": "React lazy load any components.",
   "keywords": [
-    "vue",
+    "react",
     "lazy load",
     "lazy loading",
     "lazy loading components",
@@ -15,34 +15,28 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.umd.cjs"
+      "import": "./dist/index.js"
     }
   },
-  "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "vue-tsc --noEmit && vite build",
-    "dev": "vite",
-    "serve": "vite preview"
+    "build": "vite build"
   },
   "dependencies": {
     "@lazy-load-components/core": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.14.11",
-    "@vitejs/plugin-vue": "^5.0.5",
     "typescript": "^5.5.3",
     "vite": "^5.3.4",
-    "vite-plugin-dts": "^4.0.0-beta.1",
-    "vue": "^3.4.33",
-    "vue-tsc": "^2.0.26"
+    "vite-plugin-dts": "^4.0.0-beta.1"
   },
   "peerDependencies": {
-    "vue": "3.*"
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   }
 }
